@@ -8,20 +8,18 @@ public class Exercicio {
         Notas notas = new Notas();
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite a primeira nota: ");
-        double nota1 = scan.nextDouble();
+        notas.nota1 = scan.nextDouble();
                 
         System.out.println("Digite a segunda nota: ");
-        double nota2 = scan.nextDouble();
+        notas.nota2 = scan.nextDouble();
                 
         System.out.println("Digite a terceira nota: ");
-        double nota3 = scan.nextDouble();
+        notas.nota3 = scan.nextDouble();
                 
               
-                if (notas.resultado > 6) {
+                if (notas.calcular() > 6) {
                     System.out.println("Aprovado");
-                } if (notas.resultado > 4) {
-                    System.out.println("Verificação Suplementar");
-                } if  (notas.resultado < 6) {
+                }else if (notas.calcular() > 4 && notas.calcular() <= 6) {
                     System.out.println("Verificação Suplementar");
                 } else {
                     System.out.println("Recuperação");

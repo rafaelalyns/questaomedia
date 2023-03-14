@@ -6,8 +6,16 @@ public class Notas {
     static double nota3;
     public double media;
     
-    public double resultado = ((nota1 + nota2 + nota3)/3);
+    //static double resultado = ((nota1 + nota2 + nota3)/3);
     
+    public double calcular() {
+        media = ((nota1 + nota2 + nota3)/3);
+        return media;
+    }
+    
+    public void statusAluno() {
+        
+    }
  
     
 }
